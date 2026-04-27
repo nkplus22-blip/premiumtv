@@ -44,17 +44,15 @@ a{text-decoration:none;color:inherit}
   padding:0 18px;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 .header{
   position: relative;
   padding: 40px 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* LOGO WRAPPER */
 .logo-wrapper{
   display:flex;
   flex-direction:column;
@@ -62,22 +60,18 @@ a{text-decoration:none;color:inherit}
   text-align:center;
 }
 
-/* LOGO */
 .site-logo{
   max-width:180px;
   margin-bottom:14px;
   filter: drop-shadow(0 0 12px rgba(255,200,80,0.25));
 }
 
-/* TAGLINE */
 .tagline{
   font-size:14px;
   color:var(--muted);
   font-weight:600;
-  letter-spacing:0.5px;
 }
 
-/* MENU BUTTON */
 .menu-toggle{
   position:absolute;
   top:18px;
@@ -88,8 +82,7 @@ a{text-decoration:none;color:inherit}
   font-size:32px;
 }
 
-/* ================= NAV ================= */
-
+/* NAV */
 .overlay{
   position:fixed;
   inset:0;
@@ -103,20 +96,110 @@ a{text-decoration:none;color:inherit}
   transition:.4s;
   z-index:999;
 }
-
 .overlay.open{transform:scale(1)}
-
-.overlay a{
-  font-size:22px;
-  padding:12px;
-}
-
+.overlay a{font-size:22px;padding:12px}
 .closebtn{
   position:absolute;
   top:18px;
   right:22px;
   font-size:36px;
   color:var(--neon);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px 12px;
+}
+.hero h1{
+  font-family:'Bebas Neue';
+  font-size:56px;
+  margin:0;
+}
+.hero p{
+  max-width:720px;
+  margin:14px auto;
+  color:var(--muted);
+}
+.cta{
+  display:inline-block;
+  margin:10px;
+  padding:14px 28px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--neon),var(--accent));
+  color:#001;
+  font-weight:800;
+}
+
+/* BADGES */
+.trust-badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin:20px 0;
+}
+.badge{
+  background:var(--glass);
+  padding:12px 18px;
+  border-radius:14px;
+}
+
+/* COUNTERS */
+.counters{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+.counter-box{
+  min-width:160px;
+  background:var(--glass);
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+}
+.counter{
+  font-size:26px;
+  font-weight:800;
+  color:var(--neon);
+}
+
+/* PANELS */
+.panel{
+  background:var(--glass);
+  border-radius:16px;
+  padding:26px;
+  margin:30px 0;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+}
+.trust-item{
+  background:rgba(255,255,255,.04);
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  padding:30px;
+  text-align:center;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;
 }
 </style>
 </head>
@@ -126,90 +209,54 @@ a{text-decoration:none;color:inherit}
 <div class="wrap">
 
 <header class="header">
-
   <button class="menu-toggle" onclick="openNav()">☰</button>
 
   <div class="logo-wrapper">
-    <img src="premiumtv.jpg.PNG" class="site-logo" alt="PremiumTV Europe">
-
-    <div class="tagline">
-      BROJ 1 • Kvalitet i stabilnost na PRVOM mjestu!
-    </div>
+    <img src="premiumtv.jpg.PNG" class="site-logo">
+    <div class="tagline">BROJ 1 • Kvalitet i stabilnost na PRVOM mjestu!</div>
   </div>
-
 </header>
 
 <nav id="nav" class="overlay">
   <div class="closebtn" onclick="closeNav()">×</div>
-  <a href="index.html">Početna</a>
-  <a href="onama.html">O nama</a>
-  <a href="cjenovnik.html">Cenovnik</a>
-  <a href="placanje.html">Načini plaćanja</a>
-  <a href="proba.html">Besplatna proba</a>
-  <a href="faq.html">FAQ</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="#">Početna</a>
+  <a href="#">O nama</a>
+  <a href="#">Cjenovnik</a>
+  <a href="#">Kontakt</a>
 </nav>
 
 <section class="hero">
   <h1>PremiumTV Europe</h1>
-  <p>12 godina iskustva · 20.000+ aktivnih korisnika · Stabilan HD/4K IPTV</p>
-  <a href="proba.html" class="cta">🎯 Besplatna proba</a>
-  <a href="cjenovnik.html" class="cta">💳 Pogledaj pakete</a>
+  <p>12 godina iskustva · 20.000+ korisnika · Stabilan HD/4K IPTV</p>
+  <a href="#" class="cta">🎯 Besplatna proba</a>
+  <a href="#" class="cta">💳 Pogledaj pakete</a>
 </section>
 
 <div class="trust-badges">
-  <div class="badge">🔒 Sigurna kupovina</div>
-  <div class="badge">⭐ Trusted provider</div>
-  <div class="badge">📡 99.9% uptime</div>
-  <div class="badge">🕒 Podrška 24/7</div>
-  <div class="badge">💶 Povrat Vaših sredstava u slučaju nezadovoljstva</div>
+  <div class="badge">🔒 Sigurno</div>
+  <div class="badge">⭐ Trusted</div>
+  <div class="badge">📡 99.9%</div>
+  <div class="badge">🕒 24/7</div>
 </div>
 
 <div class="counters">
-  <div class="counter-box"><div class="counter" data-target="20000">0</div><div class="counter-label">Korisnika</div></div>
-  <div class="counter-box"><div class="counter" data-target="12">0</div><div class="counter-label">Godina</div></div>
-  <div class="counter-box"><div class="counter" data-target="24">0</div><div class="counter-label">Podrška</div></div>
-</div>
-
-<div class="panel">
-  <h2>📡 Status sistema</h2>
-  <div class="trust-grid">
-    <div class="trust-item">🟢<h3>Sistem</h3><p>Online</p></div>
-    <div class="trust-item">⚡<h3>Serveri</h3><p>Stabilni</p></div>
-    <div class="trust-item">🌍<h3>Pokrivenost</h3><p>EU / USA</p></div>
-    <div class="trust-item">🔐<h3>Sigurnost</h3><p>Zaštićeno</p></div>
-  </div>
-</div>
-
-<div class="panel">
-  <h2>Za koga je PremiumTV Europe?</h2>
-  <div class="trust-grid">
-    <div class="trust-item">👨‍👩‍👧<h3>Porodice</h3><p>Kanali za sve uzraste</p></div>
-    <div class="trust-item">⚽<h3>Sport</h3><p>Premium sport</p></div>
-    <div class="trust-item">🎬<h3>Filmovi</h3><p>Ogromna VOD ponuda</p></div>
-    <div class="trust-item">🌍<h3>Dijaspora</h3><p>Balkan kanali</p></div>
-  </div>
-</div>
-
-<div class="panel" style="text-align:center">
-  <h2>Još niste sigurni?</h2>
-  <p style="color:var(--muted)">Testirajte IPTV bez ikakve obaveze</p>
-  <a href="proba.html" class="cta">🎯 Pokreni besplatnu probu</a>
+  <div class="counter-box"><div class="counter" data-target="20000">0</div>Korisnika</div>
+  <div class="counter-box"><div class="counter" data-target="12">0</div>Godina</div>
+  <div class="counter-box"><div class="counter" data-target="24">0</div>Podrška</div>
 </div>
 
 <footer>
-  <strong>PremiumTV Europe</strong>
-  <small>©2026 Sva prava zadržana</small>
-  <small>Ne hostujemo niti emitiramo sadržaj</small>
+  <strong>PremiumTV Europe</strong><br>
+  ©2026
 </footer>
 
 </div>
 
-<a href="https://wa.me/3816516253" class="whatsapp">💬 WhatsApp</a>
+<a href="#" class="whatsapp">💬 WhatsApp</a>
 
 <script>
-function openNav(){nav.classList.add("open")}
-function closeNav(){nav.classList.remove("open")}
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
 
 document.querySelectorAll(".counter").forEach(c=>{
   let t=+c.dataset.target,n=0,s=t/60;
