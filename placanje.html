@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Načini plaćanja – PremiumTV Europe</title>
+
+<meta name="description" content="Verified i sigurni načini plaćanja za PremiumTV Europe. Preko 20.000+ korisnika širom Evrope.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --neon:#2ac0ff;
+  --muted:rgba(200,220,255,.25);
+  --glass:rgba(255,255,255,.05);
+  --green:#3dff9e;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter;
+  background:linear-gradient(180deg,#050714,#02102a);
+  color:#e6f7ff;
+  overflow-x:hidden;
+}
+body.nav-open{overflow:hidden}
+
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 0 20px;
+  position:relative;
+}
+h1{
+  font-family:'Bebas Neue';
+  font-size:48px;
+  margin:0;
+}
+header p{color:var(--muted)}
+
+.menu-btn{
+  position:absolute;
+  top:20px;
+  left:20px;
+  font-size:34px;
+  cursor:pointer;
+}
+
+/* OVERLAY NAV – FIXED */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(2,10,30,.98);
+  z-index:2000;
+  display:none;
+  padding-top:80px;
+  text-align:center;
+}
+.overlay.open{display:block}
+.overlay a{
+  display:block;
+  padding:14px;
+  font-size:26px;
+}
+.overlay a:hover{color:var(--neon)}
+.closebtn{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:46px;
+  cursor:pointer;
+}
+
+/* VERIFIED */
+.verified{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:20px auto;
+  padding:10px 18px;
+  border-radius:30px;
+  background:rgba(61,255,158,.08);
+  border:1px solid rgba(61,255,158,.25);
+  color:var(--green);
+  font-size:14px;
+  font-weight:600;
+}
+
+/* TRUST BAR */
+.trust-bar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:18px;
+  font-size:14px;
+  color:var(--muted);
+  margin:25px 0;
+}
+
+/* PANELS */
+.panel{
+  background:var(--glass);
+  border-radius:18px;
+  padding:28px;
+  margin:30px 0;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.pay-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
+
+.pay-box{
+  background:rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:26px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.05);
+  cursor:pointer;
+  transition:.25s;
+}
+.pay-box:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(42,176,255,.25);
+}
+.pay-box strong{
+  display:block;
+  margin-top:10px;
+  font-size:18px;
+  color:var(--neon);
+}
+.pay-box::after{
+  content:"✔ Sigurna & verifikovana uplata";
+  display:block;
+  font-size:11px;
+  color:var(--green);
+  margin-top:10px;
+}
+
+/* FOOTER */
+.footer-note{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;
+  font-weight:800;
+  z-index:1000;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html" onclick="closeNav()">Početna</a>
+  <a href="onama.html" onclick="closeNav()">O nama</a>
+  <a href="cjenovnik.html" onclick="closeNav()">Cjenovnik</a>
+  <a href="placanje.html" onclick="closeNav()">Načini plaćanja</a>
+  <a href="proba.html" onclick="closeNav()">Besplatna proba</a>
+  <a href="faq.html" onclick="closeNav()">FAQ</a>
+  <a href="kontakt.html" onclick="closeNav()">Kontakt</a>
+</nav>
+
+<div class="wrap">
+
+<header>
+  <span class="menu-btn" onclick="openNav()">☰</span>
+  <h1>Načini plaćanja</h1>
+  <p>Sigurna uplata – brza aktivacija</p>
+  <div class="verified">✔ VERIFIED & TRUSTED SERVICE</div>
+</header>
+
+<div class="trust-bar">
+  <span>🔒 SSL Enkripcija</span>
+  <span>🛡️ Ne pohranjujemo kartične podatke</span>
+  <span>👤 Ručna obrada uplata</span>
+  <span>📞 24/7 podrška</span>
+</div>
+
+<div class="panel" style="text-align:center">
+  ⭐ Više od <strong>20.000+</strong> korisnika potvrdilo sigurnost naših plaćanja
+</div>
+
+<div class="panel" style="font-size:14px;color:var(--muted)">
+  ℹ️ Aktivacija: <strong>5–30 minuta</strong> (max 12h).  
+  💰 U slučaju problema nudimo zamjenu ili povrat sredstava.  
+  ⚠️ Nikada ne tražimo lozinke ili kodove.
+</div>
+
+<div class="panel">
+  <div class="pay-grid">
+    <div class="pay-box" onclick="pay('Visa / MasterCard')">💳<strong>Visa / MasterCard</strong></div>
+    <div class="pay-box" onclick="pay('PayPal')">🅿️<strong>PayPal</strong></div>
+    <div class="pay-box" onclick="pay('Skrill')">💼<strong>Skrill</strong></div>
+    <div class="pay-box" onclick="pay('IBAN')">🏦<strong>IBAN</strong></div>
+    <div class="pay-box" onclick="pay('Crypto')">₿<strong>Crypto</strong></div>
+    <div class="pay-box" onclick="pay('Western Union')">🌍<strong>Western Union</strong></div>
+    <div class="pay-box" onclick="pay('Ria Money')">💸<strong>Ria Money</strong></div>
+    <div class="pay-box" onclick="pay('Poslovnica Sarajevo')">🏢<strong>Poslovnica</strong></div>
+  </div>
+</div>
+
+<div class="panel footer-note">
+  Posljednje ažuriranje sistema plaćanja: <strong>2026<strong>
+</div>
+
+</div>
+
+<a href="https://wa.me/381616516253" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){
+  document.getElementById("nav").classList.add("open");
+  document.body.classList.add("nav-open");
+}
+function closeNav(){
+  document.getElementById("nav").classList.remove("open");
+  document.body.classList.remove("nav-open");
+}
+function pay(method){
+  const text=`Zdravo, želio bih vaše usluge platiti putem ${method}. Molim podatke. Hvala!`;
+  window.open("https://wa.me/381616516253?text="+encodeURIComponent(text),"_blank");
+}
+</script>
+
+</body>
+</html>
