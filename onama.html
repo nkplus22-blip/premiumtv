@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>O nama – PremiumTV</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PremiumTV Europe – preko 12 godina iskustva i 20.000+ aktivnih korisnika. Stabilan IPTV servis sa garancijom i podrškom 24/7.">
+  <meta name="keywords" content="PremiumTV Europe, o nama, IPTV provajder, stabilan IPTV">
+  <meta name="author" content="PremiumTV Europe">
+
+  <!--Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --neon:#2ac0ff;
+      --accent:#4a6bff;
+      --muted:rgba(200,220,255,.25);
+      --glass:rgba(255,255,255,.05);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:linear-gradient(180deg,#050714,#02102a);
+      color:#e6f7ff;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1000px;margin:auto;padding:0 18px}
+
+    header{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 12px;
+      position:relative;
+    }
+    .site-logo{max-width:200px}
+    .menu-toggle{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:none;
+      border:none;
+      color:var(--neon);
+      font-size:32px;
+      cursor:pointer;
+    }
+
+    /* NAV */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,6,20,.96);
+      backdrop-filter:blur(8px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      transform:scale(0);
+      transition:.4s;
+      z-index:999;
+    }
+    .overlay.open{transform:scale(1)}
+    .overlay a{font-size:22px;padding:12px 20px}
+    .closebtn{
+      position:absolute;
+      top:18px;
+      right:22px;
+      font-size:36px;
+      color:var(--neon);
+      cursor:pointer;
+    }
+
+    .hero{
+      text-align:center;
+      padding:30px 0 20px;
+    }
+    .hero h1{
+      font-family:'Bebas Neue';
+      font-size:46px;
+      margin:0;
+    }
+    .hero p{
+      max-width:720px;
+      margin:12px auto;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .panel{
+      background:var(--glass);
+      border-radius:16px;
+      padding:26px;
+      margin:24px 0;
+      border:1px solid rgba(255,255,255,.05);
+    }
+    .panel h2{margin-top:0}
+    .panel p{line-height:1.8;color:#dff4ff}
+
+    .highlights{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .highlight{
+      background:rgba(255,255,255,.04);
+      border-radius:14px;
+      padding:18px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.05);
+    }
+    .highlight strong{
+      display:block;
+      font-size:22px;
+      color:var(--neon);
+    }
+    .highlight span{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .cta{
+      display:inline-block;
+      margin-top:12px;
+      padding:14px 26px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--neon),var(--accent));
+      color:#001;
+      font-weight:800;
+    }
+
+    footer{
+      margin-top:40px;
+      padding:30px 12px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.05);
+      background:rgba(0,0,0,.6);
+    }
+    footer small{
+      display:block;
+      margin-top:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:800;
+      z-index:999;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <img src="premiumtv.jpg.PNG" alt="PremiumTV Europe" class="site-logo" loading="lazy">
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+</header>
+
+<!-- FINAL HAMBURGER MENU -->
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="onama.html">O nama</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="placanje.html">Načini plaćanja</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>Ko smo mi</h1>
+  <p>
+    PremiumTV Europe je profesionalni IPTV provajder sa jasnim ciljem –
+    ponuditi stabilan, kvalitetan i pouzdan IPTV servis korisnicima širom svijeta.
+  </p>
+</section>
+
+<div class="panel">
+  <h2>12 godina iskustva i povjerenja</h2>
+  <p>
+    Više od <strong>12 godina</strong> razvijamo IPTV infrastrukturu koja danas
+    opslužuje preko <strong>20.000 aktivnih korisnika</strong>.
+    Naš fokus je stabilnost, kvalitet i dugoročno zadovoljstvo korisnika.
+  </p>
+</div>
+
+<div class="panel">
+  <h2>Zašto nam korisnici vjeruju?</h2>
+  <p>
+    Aktivni smo <strong>24/7</strong>, nudimo <strong>potpunu garanciju</strong> na svaku kupovinu
+    i pružamo brzu i profesionalnu podršku.
+  </p>
+
+  <div class="highlights">
+    <div class="highlight"><strong>20.000+</strong><span>aktivnih korisnika</span></div>
+    <div class="highlight"><strong>12+</strong><span>godina iskustva</span></div>
+    <div class="highlight"><strong>24/7</strong><span>podrška</span></div>
+    <div class="highlight"><strong>100%</strong><span>garancija</span></div>
+  </div>
+</div>
+
+<div class="panel" style="text-align:center">
+  <h2>Spremni za isprobavanje?</h2>
+  <p>Kontaktirajte nas ili zatražite besplatnu probu bez obaveze.</p>
+  <a href="proba.html" class="cta">🎯 Besplatna proba</a>
+</div>
+
+<footer>
+  <strong>PremiumTV Europe</strong>
+  <small>©2026 Sva prava zadržana</small>
+  <small>PremiumTV Europe ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+  <small>Svi nazivi kanala i logotipi pripadaju svojim vlasnicima.</small>
+</footer>
+
+</div>
+
+<a href="https://wa.me/381616516253" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
+</script>
+
+</body>
+</html>
