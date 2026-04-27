@@ -26,148 +26,117 @@
   --muted:rgba(200,220,255,.25);
   --glass:rgba(255,255,255,.05);
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:Inter,system-ui;
   background:linear-gradient(180deg,#050714,#02102a);
   color:#e6f7ff;
 }
-a{text-decoration:none;color:inherit}
-.wrap{max-width:1200px;margin:auto;padding:0 18px}
 
-/* HEADER */
-header{
-  text-align:center;
-  padding:24px 12px;
-  position:relative;
+a{text-decoration:none;color:inherit}
+
+.wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:0 18px;
 }
-.site-logo{max-width:220px}
-.tagline{font-size:14px;color:var(--muted);font-weight:600}
+
+/* ================= HEADER ================= */
+
+.header{
+  position: relative;
+  padding: 40px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGO WRAPPER */
+.logo-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* LOGO */
+.site-logo{
+  max-width:180px;
+  margin-bottom:14px;
+  filter: drop-shadow(0 0 12px rgba(255,200,80,0.25));
+}
+
+/* TAGLINE */
+.tagline{
+  font-size:14px;
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+/* MENU BUTTON */
 .menu-toggle{
   position:absolute;
-  top:18px;right:18px;
-  background:none;border:none;
+  top:18px;
+  right:18px;
+  background:none;
+  border:none;
   color:var(--neon);
   font-size:32px;
 }
 
-/* NAV */
+/* ================= NAV ================= */
+
 .overlay{
-  position:fixed;inset:0;
+  position:fixed;
+  inset:0;
   background:rgba(0,6,20,.96);
   backdrop-filter:blur(8px);
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   transform:scale(0);
-  transition:.4s;z-index:999;
-}
-.overlay.open{transform:scale(1)}
-.overlay a{font-size:22px;padding:12px}
-.closebtn{
-  position:absolute;top:18px;right:22px;
-  font-size:36px;color:var(--neon);
-}
-
-/* HERO */
-.hero{text-align:center;padding:40px 12px}
-.hero h1{
-  font-family:'Bebas Neue';
-  font-size:56px;margin:0;
-}
-.hero p{
-  max-width:720px;margin:14px auto;
-  color:var(--muted);line-height:1.7;
-}
-.cta{
-  display:inline-block;
-  margin:10px;
-  padding:14px 28px;
-  border-radius:14px;
-  background:linear-gradient(135deg,var(--neon),var(--accent));
-  color:#001;font-weight:800;
-}
-
-/* TRUST BADGES */
-.trust-badges{
-  display:flex;flex-wrap:wrap;
-  justify-content:center;gap:14px;
-  margin:20px 0;
-}
-.badge{
-  background:var(--glass);
-  padding:12px 18px;
-  border-radius:14px;
-  font-size:13px;
-  border:1px solid rgba(255,255,255,.05);
-}
-
-/* COUNTERS */
-.counters{
-  display:flex;flex-wrap:wrap;
-  justify-content:center;gap:14px;
-  margin:30px 0;
-}
-.counter-box{
-  min-width:160px;
-  background:var(--glass);
-  padding:18px;border-radius:14px;
-  text-align:center;
-}
-.counter{font-size:26px;font-weight:800;color:var(--neon)}
-.counter-label{font-size:13px;color:var(--muted)}
-
-/* PANELS */
-.panel{
-  background:var(--glass);
-  border-radius:16px;
-  padding:26px;margin:30px 0;
-  border:1px solid rgba(255,255,255,.05);
-}
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:16px;margin-top:16px;
-}
-.trust-item{
-  background:rgba(255,255,255,.04);
-  border-radius:14px;
-  padding:20px;text-align:center;
-}
-.trust-item h3{margin:10px 0 6px;color:var(--neon)}
-.trust-item p{font-size:14px;color:var(--muted)}
-
-/* FOOTER */
-footer{
-  margin-top:40px;
-  padding:30px 12px;
-  text-align:center;
-  background:rgba(0,0,0,.6);
-  border-top:1px solid rgba(255,255,255,.05);
-}
-footer small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;right:18px;bottom:18px;
-  padding:14px 18px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#25d366,#128c7e);
-  color:#fff;font-weight:800;
+  transition:.4s;
   z-index:999;
+}
+
+.overlay.open{transform:scale(1)}
+
+.overlay a{
+  font-size:22px;
+  padding:12px;
+}
+
+.closebtn{
+  position:absolute;
+  top:18px;
+  right:22px;
+  font-size:36px;
+  color:var(--neon);
 }
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
-<header>
-  <img src="premiumtv.jpg.PNG" class="site-logo" alt="PremiumTV Europe"
-  
-  
-   <div class="tagline"> BROJ 1 !  •Kvalitet i stabilnost na PRVOM mjestu!</div>
+<header class="header">
+
   <button class="menu-toggle" onclick="openNav()">☰</button>
+
+  <div class="logo-wrapper">
+    <img src="premiumtv.jpg.PNG" class="site-logo" alt="PremiumTV Europe">
+
+    <div class="tagline">
+      BROJ 1 • Kvalitet i stabilnost na PRVOM mjestu!
+    </div>
+  </div>
+
 </header>
 
 <nav id="nav" class="overlay">
